@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="liang/chapter9/Rectangle.java"/>
+			<include name="liang/chapter9/Circle.java"/>
+			<include name="liang/chapter9/Triangle.java"/>
+			<include name="liang/chapter9/Circle2.java"/>
+			<include name="liang/chapter9/GeometricObject.java"/>
+			<include name="liang/chapter9/Octagon.java"/>
+			<include name="liang/chapter9/TestCircleRectangle_Polymorphism.java"/>
+			<include name="liang/chapter9/GraduateStudent.java"/>
+			<include name="liang/chapter9/Student.java"/>
+			<include name="liang/chapter9/Person2.java"/>
+			<include name="liang/chapter9/PolymorphismDemo.java"/>
+			<include name="liang/chapter9/TestPolymorphismCasting.java"/>
+			<include name="liang/chapter9/Fruit.java"/>
+			<include name="liang/chapter9/Apple.java"/>
+			<include name="liang/chapter9/TestCircleRectangle_Basic_Reuse.java"/>
+			<include name="liang/chapter9/Person.java"/>
+			<include name="liang/chapter9/Employee.java"/>
+			<include name="liang/chapter9/Faculty.java"/>
+			<include name="liang/chapter9/Test.java"/>
+		</javac>
+	</target>
+</project>
